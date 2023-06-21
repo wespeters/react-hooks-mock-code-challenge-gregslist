@@ -23,8 +23,8 @@ function ListingForm({ onAddListing }) {
       },
       body: JSON.stringify(formData)
     })
-      .then(response => response.json())
-      .then(listingData => onAddListing(listingData));
+      .then(r => r.json())
+      .then(onAddListing);
   }
 
   return (
